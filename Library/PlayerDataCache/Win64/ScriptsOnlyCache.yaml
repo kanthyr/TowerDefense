@@ -26,8 +26,11 @@ ScriptsOnlyBuild:
     - TowerFiring
     - TowerProjectile
     - UIManager
+    UModelerCommon.dll:
+    - tripolygon.UModeler.ElementSet
+    UModelerEditor.dll:
+    - TPUModelerEditor.MenuWindow
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
@@ -39,12 +42,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -91,69 +88,69 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11656}
     - Class: 114
-      Script: {instanceID: 11876}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 12194}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12688}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12370}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12866}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13060}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13174}
+      Script: {instanceID: 13104}
     - Class: 114
-      Script: {instanceID: 13250}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13266}
+      Script: {instanceID: 13354}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13418}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 15078}
+      Script: {instanceID: 13646}
     - Class: 114
-      Script: {instanceID: 17626}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 18636}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 27132}
+      Script: {instanceID: 13754}
     - Class: 114
-      Script: {instanceID: 35670}
+      Script: {instanceID: 13770}
     - Class: 114
-      Script: {instanceID: 36994}
+      Script: {instanceID: 13810}
     - Class: 114
-      Script: {instanceID: 46256}
+      Script: {instanceID: 13868}
     - Class: 114
-      Script: {instanceID: 46314}
+      Script: {instanceID: 14110}
     - Class: 114
-      Script: {instanceID: 62894}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 63988}
+      Script: {instanceID: 14282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,29 +193,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 13418}
     - Class: 114
-      Script: {instanceID: 13174}
+      Script: {instanceID: 13434}
     - Class: 114
-      Script: {instanceID: 13250}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13754}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13950}
     - Class: 114
-      Script: {instanceID: 23862}
+      Script: {instanceID: 14202}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -238,16 +235,28 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 6da3293be32dc57d5160c80c35ad873d
+    assemblyName: UModelerCommon.dll
+    namespaceName: tripolygon.UModeler
+    className: ElementSet
+  - hash:
+      serializedVersion: 2
+      Hash: f5ac2b7df02d7beafdf515307833e158
+    assemblyName: UModelerCommon.dll
+    namespaceName: tripolygon.UModeler
+    className: UModeler
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -268,6 +277,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuDisplay
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -278,6 +293,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RemoveTowerButton
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -320,6 +341,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -541,7 +568,19 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: NextRoundDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: Killzone
+  - hash:
+      serializedVersion: 2
+      Hash: 0716c5142cf83bba272501a779f27740
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverDisplay
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -568,6 +607,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 0a0d2aa59c60e0b897beff2493ad63ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyManager
+  - hash:
+      serializedVersion: 2
       Hash: bfeb96683d3796cadaab890bfdfe92be
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -578,6 +623,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 0bb05969d10c6f0e513abf7574d61445
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LivesDisplay
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -604,6 +661,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StageManager
+  - hash:
+      serializedVersion: 2
       Hash: ad4af01eeb7f0a9ae0be2df3e0f1953a
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -616,12 +679,6 @@ ScriptsOnlyBuild:
     className: HIDDescriptorWindow
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -632,6 +689,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: 
     className: DownloadableSample
+  - hash:
+      serializedVersion: 2
+      Hash: c6a175f063fb4391219d9279c6461aea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraManager
   - hash:
       serializedVersion: 2
       Hash: 5d5b0c61f3ab6ff5f41b1bbe19764526
@@ -742,6 +805,12 @@ ScriptsOnlyBuild:
     className: Targeter
   - hash:
       serializedVersion: 2
+      Hash: b6ce315d291d309422636ed3ace41c20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -770,6 +839,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: bfe9e77caa79cc8a37bfb70b3e918189
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverManager
   - hash:
       serializedVersion: 2
       Hash: c34aaf9262cd1bbc38f67a7da60f18f1
@@ -898,6 +973,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: b1bdab419c32487f90c6dca16a957f83
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.EnhancedTouch
@@ -908,74 +989,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0bb05969d10c6f0e513abf7574d61445
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LivesDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: bfe9e77caa79cc8a37bfb70b3e918189
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameOverManager
-  - hash:
-      serializedVersion: 2
-      Hash: 0716c5142cf83bba272501a779f27740
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameOverDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenuDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NextRoundDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: b6ce315d291d309422636ed3ace41c20
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UIManager
-  - hash:
-      serializedVersion: 2
-      Hash: c6a175f063fb4391219d9279c6461aea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StageManager
-  - hash:
-      serializedVersion: 2
-      Hash: 0a0d2aa59c60e0b897beff2493ad63ac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemyManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: b1bdab419c32487f90c6dca16a957f83
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: E:/Unity/Unity creations/TowerDefense/Build/TowerDefense.exe
+  playerPath: E:/Unity/Unity builds/TowerDefense/TowerDefense.exe

@@ -155,6 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1651157914989457002}
-  launchForce: 100
+  launchForce: 150
   destroyAfterSeconds: 5
   damageToDeal: 1

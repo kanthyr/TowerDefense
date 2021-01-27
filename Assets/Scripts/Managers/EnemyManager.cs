@@ -90,10 +90,12 @@ public class EnemyManager : MonoBehaviour
         {
             numberOfSpawns = 1;
             enemySelection++;
-            if (enemySelection > 9)
-            {
-                enemySelection = 0;
-            }
+        }
+
+        if (enemySelection > 9)
+        {
+            enemySelection = 0;
         }
     }
+
 }
