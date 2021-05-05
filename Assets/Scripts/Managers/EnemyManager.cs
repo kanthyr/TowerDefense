@@ -12,6 +12,9 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] Transform spawnPoint = null;
     [SerializeField] List<Enemy> enemyCount = new List<Enemy>();
 
+    [Header("UI")]
+    [SerializeField] GameObject victoryDisplay = default;
+
     int numberOfSpawns = 1;
     int enemySelection;
 
@@ -45,7 +48,7 @@ public class EnemyManager : MonoBehaviour
         if (enemyCount.Count == 0) 
         {
             currentStage = SpawnStages.DEFEATED;
-            OnLastEnemyDefeated?.Invoke();
+            StartCoroutine(nameof(DefeatStage));
         }
     }
 
@@ -98,4 +101,11 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    IEnumerator DefeatStage()
+    {
+        victoryDisplay.SetActive(true);
+        yield return new WaitForSecondsRealtime(3f);
+        OnLastEnemyDefeated?.Invoke();
+        victoryDisplay.SetActive(false);
+    }
 }

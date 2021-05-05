@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("Config")]
+    [SerializeField] private float moveSpeed = 15f;
+
     GameObject[] waypointsQueue;
     int waypointNumber = 0;
 
@@ -13,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _agent.speed = moveSpeed;
         waypointsQueue = GameObject.FindGameObjectsWithTag("Waypoint");
         _agent.SetDestination(waypointsQueue[waypointNumber].transform.position);
     }

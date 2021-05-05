@@ -25,6 +25,8 @@ public class Targeter : MonoBehaviour
     {
         if (!other.TryGetComponent<Targetable>(out Targetable newTarget)) { return; }
 
+        if (target != null) { return; }
+
         target = newTarget;
     }
 

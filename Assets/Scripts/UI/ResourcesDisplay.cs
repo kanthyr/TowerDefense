@@ -7,20 +7,16 @@ public class ResourcesDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text resourcesText = null;
 
-    GameManager gameManager;
-
     private void Start()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        HandleResourcesUpdated(GameManager.singleton.GetResources());
 
-        HandleResourcesUpdated(gameManager.GetResources());
-
-        gameManager.OnResourcesUpdated += HandleResourcesUpdated;
+        GameManager.OnResourcesUpdated += HandleResourcesUpdated;
     }
 
     private void OnDestoy()
     {
-        gameManager.OnResourcesUpdated -= HandleResourcesUpdated;
+        GameManager.OnResourcesUpdated -= HandleResourcesUpdated;
     }
 
     private void HandleResourcesUpdated(int resources)

@@ -8,14 +8,10 @@ public class GameOverDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText = null;
 
-    GameManager gameManager;
-
     public static event Action OnGameOverButton;
 
     void Start()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>();
-
         GameManager.OnGameOver += HandleOnGameOver;
     }
 
@@ -31,6 +27,6 @@ public class GameOverDisplay : MonoBehaviour
 
     private void HandleOnGameOver()
     {
-        scoreText.text = $"Puntuación = {gameManager.GetScore()}";
+        scoreText.text = $"Puntuación = {GameManager.singleton.GetScore()}";
     }
 }

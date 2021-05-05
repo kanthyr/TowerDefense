@@ -14,7 +14,6 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private LayerMask floorMask = new LayerMask();
 
     private Camera mainCamera;
-    private GameManager gameManager;
     private BoxCollider buildingCollider;
     private GameObject buildingPreviewInstance;
     private Renderer buildingRendererInstance;
@@ -26,8 +25,6 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         iconImage.sprite = tower.GetIcon();
         priceText.text = tower.GetPrice().ToString();
         buildingCollider = tower.GetComponent<BoxCollider>();
-
-        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     private void Update()
@@ -40,7 +37,7 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (eventData.button != PointerEventData.InputButton.Left) { return; }
 
-        if (gameManager.GetResources() < tower.GetPrice()) { return; }
+        if (GameManager.singleton.GetResources() < tower.GetPrice()) { return; }
 
         buildingPreviewInstance = Instantiate(tower.GetBuildingPreview());
         buildingRendererInstance = buildingPreviewInstance.GetComponentInChildren<Renderer>();
@@ -56,7 +53,7 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
-            gameManager.TryPlaceBuilding(tower.GetId(), hit.point);
+            GameManager.singleton.TryPlaceBuilding(tower.GetId(), hit.point);
         }
 
         Destroy(buildingPreviewInstance);
@@ -75,7 +72,7 @@ public class TowerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             buildingPreviewInstance.SetActive(true);
         }
 
-        Color color = gameManager.CanPlaceBuilding(buildingCollider, hit.point) ? Color.green : Color.red;
+        Color color = GameManager.singleton.CanPlaceBuilding(buildingCollider, hit.point) ? Color.green : Color.red;
 
         buildingRendererInstance.material.SetColor("_Color", color);
     }

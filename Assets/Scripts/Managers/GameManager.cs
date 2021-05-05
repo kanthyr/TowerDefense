@@ -6,17 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
+
+    public static GameManager singleton;
+
+    private void Awake()
+    {
+        if (singleton != null && singleton != this) { Destroy(this); }
+
+        else
+            DontDestroyOnLoad(gameObject);
+        singleton = this;
+    }
+
+    #endregion
+
+
     [Header("Towers")]
     [SerializeField] Tower[] towers = new Tower[0];
     [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
     [SerializeField] List<Tower> myTowers = new List<Tower>();
+
     [Header("Stats")]
     [SerializeField] int _lives = 3;
     [SerializeField] int _score = 0;
     [SerializeField] int _resources = 50;
 
-    public event Action<int> OnResourcesUpdated;
-    public event Action<int> OnLivesUpdated;
+    public static event Action<int> OnResourcesUpdated;
+    public static event Action<int> OnLivesUpdated;
 
     public static event Action OnGameOver;
 
@@ -47,9 +64,10 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         Enemy.OnEnemyDespawned -= HandleEnemyOnDespawn;
-        Tower.OnBuildingSpawned += HandleTowerOnSpawn;
-        Tower.OnBuildingDespawned += HandleTowerOnDespawn;
+        Tower.OnBuildingSpawned -= HandleTowerOnSpawn;
+        Tower.OnBuildingDespawned -= HandleTowerOnDespawn;
         Killzone.OnEnemyEnterKillzone -= HandleEnemyEnterKillzone;
+        GameOverManager.OnReturnToMenu -= HandleOnReturnToMenu;
     }
 
     void SetResources(int newResources)

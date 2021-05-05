@@ -993,4 +993,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: E:/Unity/Unity builds/TowerDefense/TowerDefense.exe
+  playerPath: E:/Unity/Unity builds/TowerDefense-Build/TowerDefense.exe

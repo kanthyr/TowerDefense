@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private int enemyResourceValue = 10;
 
+    [SerializeField] private GameObject deathFX = default;
+
     public static event Action<Enemy> OnEnemySpawned;
     public static event Action<Enemy> OnEnemyDespawned;
 
@@ -36,6 +38,7 @@ public class Enemy : MonoBehaviour
     private void HandleDie()
     {
         OnEnemyDespawned?.Invoke(this);
+        Instantiate(deathFX, new Vector3(this.transform.position.x, deathFX.transform.position.y, this.transform.position.z), deathFX.transform.rotation);
         Destroy(this.gameObject);
     }
 }

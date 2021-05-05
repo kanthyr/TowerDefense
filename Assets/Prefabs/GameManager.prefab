@@ -57,7 +57,7 @@ MonoBehaviour:
   myTowers: []
   _lives: 3
   _score: 0
-  _resources: 50
+  _resources: 80
 --- !u!114 &1079594240002286660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +82,7 @@ MonoBehaviour:
   - {fileID: 6977176696456798368, guid: e380c7b12c6b890449ecd2efe2ed614c, type: 3}
   spawnPoint: {fileID: 0}
   enemyCount: []
+  victoryDisplay: {fileID: 0}
 --- !u!114 &357872444449830793
 MonoBehaviour:
   m_ObjectHideFlags: 0

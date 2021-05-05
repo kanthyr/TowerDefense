@@ -7,8 +7,6 @@ public class GameOverManager : MonoBehaviour
 {
     [SerializeField] GameObject gameOverDisplay;
 
-    GameManager gameManager;
-
     public static event Action OnReturnToMenu;
 
     // Start is called before the first frame update

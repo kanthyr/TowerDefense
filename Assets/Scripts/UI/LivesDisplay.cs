@@ -7,20 +7,17 @@ public class LivesDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text livesText = null;
 
-    GameManager gameManager;
 
     private void Start()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        HandleLivesUpdated(GameManager.singleton.GetLives());
 
-        HandleLivesUpdated(gameManager.GetLives());
-
-        gameManager.OnLivesUpdated += HandleLivesUpdated;
+        GameManager.OnLivesUpdated += HandleLivesUpdated;
     }
 
     private void OnDestoy()
     {
-        gameManager.OnLivesUpdated -= HandleLivesUpdated;
+        GameManager.OnLivesUpdated -= HandleLivesUpdated;
     }
 
     private void HandleLivesUpdated(int lives)
